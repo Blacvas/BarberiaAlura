@@ -1,0 +1,295 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    background-color: #BBBBBB;
+    /*20px para margen superior e inferior y 0 para los constados*/
+    padding: 20px 0;
+}
+
+.caja{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav{
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a{
+    text-transform: uppercase;
+    color: #000000;
+    /*Se define el peso como negrita*/
+    font-weight:bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+/*hover significa que captura el movimiento del mouse por lo que todo lo que modifiquemos aqui se vera reflejado
+en la etiqueta a del nav cuando la pantalla detecte movimiento del mouse
+Por lo que al estar asociado al elemento de navegacion van a
+cambiara de color los links*/
+nav a:hover{
+    color: #c78c19;
+    text-decoration: underline;
+}
+
+.productos{
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    /*Indicamos que los 20px del padding sean considerados en el 30% del widht*/
+    box-sizing: border-box;
+    /*Indicamos el border de los precios passando como parametro el ancho, estilo y color*/
+    border: 2px solid #000000;
+    /*Configuramos el radio de las aristas comenzando por el superior izquierdo y derecho, despues inferior derecho 
+    y por ultio inferior izquierdo como las manecillas del reloj, si dejamos un valor se aplica a todos*/
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color: #c78c19;
+}
+
+/*Este funciona de la misma manera que el hover solo que en esta ocacion detecta
+si se ha hecho clic en el borde de las listas*/
+.productos li:active{
+    border-color: #088c19;
+}
+
+.productos h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*Cuando se detecte movimeinto del mouse sobre
+un elemento de la lista li tiene que cambiar de tamaño el titulo h2*/
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.product_descrip{
+    font-size: 18px;
+}
+
+.product_precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    text-align: center;
+    /*Dentro del archivo CSS se nos permite colocar imagenes como bacground o fondo
+    unicamente usando la propiedad url si la imagen es pequeña se repetira hasta cubrir todo
+    el espacio*/
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+.copyright{
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px;
+}
+
+form{
+    margin: 40px 0;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+/*Con el punto estamos indicando que el mismo estilo se aplique tambien al text area*/
+.input-padron{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    /*Le estamos indicando que ocupe el 50% de los pixeles que hemos declarado antes(940px) */
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    /*Espaciamiento interno arriba y abajo y cero a los laterales*/
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: orange;
+    border: none;
+    border-radius: 5px;
+    /*Timepo que va a demorar en cambiar de color el background*/
+    transition: 1s all;
+    /*Cambiamos el cursor por el de la manita cuando se posiciona sobre el boton*/
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background: darkorange;
+    /*Con trasnsform lo que hacemos es cambiara la propedad de un item como por ejemplo la escala*/
+    transform: scale(1.2);
+}
+
+table{
+    margin: 40px 40px;
+}
+
+thead{
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+
+/*Estilos para la paguina de home*/
+
+.banner{
+    width: 100%;
+}
+
+.principal{
+    padding: 3em 0;
+    background: #FFFFFF;
+    /*Esta configuracion es la habitual para poder configurar que un elemento se centre y 
+    no necesariamente se centren los textos o labels*/
+    width: 940px;
+    margin: 0 auto;
+}
+
+.titulo-principal{
+    text-align: center;
+    font-size: 2em;
+    margin: 0 0 1em;
+    clear: left;
+}
+
+.principal p{
+    margin: 0 0 1em;
+}
+
+.principal strong{
+    font-weight: bold;
+}
+
+.principal em{
+    font-style: italic;
+}
+
+.utensilios{
+    width: 120px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.mapa{
+    padding: 3em 0;
+    background: linear-gradient(#FFFFFF, #888888);
+}
+
+.mapa p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.mapa-google{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.diferenciales{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.contdif{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.listdif{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.items{
+    line-height: 1.5;
+}
+
+.items::before{
+    content: "◆";
+}
+
+/*Le estamos indicando que al primer item lo pinte de negro*/
+.items:first-child{
+    font-weight: bold;
+}
+
+.imagenDif{
+    width: 60%;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 15px #000000;
+}
+
+.imagenDif:hover{
+    /*Opacidad el 30% y una transicion de la opacidad de 400ms*/
+    opacity: 30%;
+}
+
+.video{
+    width: 560px;
+    /*Margen automatico a los laterales*/
+    margin: 0 auto;
+}
+
+.videonuevo{
+    background: linear-gradient(#888888, black);
+    padding: 1em 0;
+}
+
+@media screen and (max-width: 480px) {
+    h1{
+        text-align: center;
+    }
+
+    nav{
+        position: static;
+    }
+
+    .caja, .principal, .mapa-google, .contdif, .video{
+        width: auto;
+    }
+    .listdif, .imagenDif{
+        width: 100%;
+    }
+}
